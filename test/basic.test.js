@@ -165,4 +165,8 @@ describe("basic", function() {
     css.should.match(/\.a-color/);
     css.should.match(/\.b-color/);
   });
+  it("stylus - @extends", function() {
+    var css = require('!raw-loader!..!./fixtures/stylus/extends');
+    css.should.match(/\.warning,\s+\.error/);
+  });
 });
